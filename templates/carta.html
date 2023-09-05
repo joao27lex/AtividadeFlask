@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #349a7399;;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        form {
+            width: 85%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p{
+            padding-right: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="date"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="date"]:focus,
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <h1>Escreva a sua carta!</h1>
+
+    <form method="POST" action="/texto">
+        <p><label for="data">Data</label><input type="date" name="data" id="data"></p>
+        <p><label for="destinatario">Destinatário</label> <input type="text" name="destinatario" id="destinatario"></p>
+        <p><label for="mensagem">Mensagem</label> <textarea name="mensagem" id="mensagem" rows="6"></textarea></p>
+        <p><label for="remetente">Remetente</label> <input type="text" name="remetente" id="remetente"></p>
+        <p><input type="submit" value="Gerar carta"></p>
+    </form>
+
+</body>
+</html>
